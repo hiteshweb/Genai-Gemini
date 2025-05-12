@@ -1,0 +1,36 @@
+<div style="max-width: 600px; margin: 2rem auto; font-family: Arial;">
+  <h2>🔮 Google Gemini Text Generator (Free API)</h2>
+
+  <textarea [(ngModel)]="prompt" rows="4" placeholder="Enter your prompt..." style="width: 100%; padding: 1rem;"></textarea>
+  <button (click)="generateText()" style="margin-top: 1rem; padding: 0.5rem 1rem;">Generate</button>
+
+  <div *ngIf="loading" style="margin-top: 1rem;">Generating...</div>
+
+  <div *ngIf="response" style="margin-top: 1rem; background: #f9f9f9; padding: 1rem; border-radius: 5px; white-space: pre-wrap;">
+    <strong>Gemini Response:</strong>
+    <p [innerHTML]="getFormattedResponse()"></p>
+  </div>
+</div>
+
+
+<div style="max-width: 600px; margin: 2rem auto;">
+  <h2>🖼️ Text to Image (Stable Diffusion) - Higging Face API</h2>
+
+  <textarea [(ngModel)]="prompt" rows="4" placeholder="Describe your image..." style="width: 100%; padding: 1rem;"></textarea>
+  <button (click)="generateImage()" style="margin-top: 1rem;">Generate</button>
+
+  <p *ngIf="loading">Generating image...</p>
+  <div *ngIf="imageUrl" style="margin-top: 1rem;">
+    <img [src]="imageUrl" alt="Generated" style="max-width: 100%; border: 1px solid #ccc;" />
+  </div>
+</div>
+
+<div style="max-width: 600px; margin: auto;">
+  <h2>⚙️ Angular Code Generator (OpenAI)</h2>
+
+  <textarea [(ngModel)]="prompt" rows="4" placeholder="E.g. Create a component with input/output" style="width: 100%;"></textarea>
+  <button (click)="generateCode()">Generate</button>
+
+  <p *ngIf="loading">Generating code...</p>
+  <pre *ngIf="result">{{ result }}</pre>
+</div>
