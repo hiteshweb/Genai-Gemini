@@ -56,10 +56,3 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ## Additional Resources
 
-AIzaSyDX64GTZNzGZXEUHhBnwv-2TzLbEMNLiRA - gemini api key
-
-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 - hugging face api 
-
-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 - open api key 
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
